@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #423;
+  background-color: #422;
   color: rgb(207, 206, 206);
 }
 .App{
@@ -16,4 +19,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+a{
+  color: rgb(207, 206, 206);
+  border: 2px solid rgb(207, 206, 206);
+  padding: 10px;
+  text-decoration: none;
+  height: 40px;
+  background-color: rgb(121, 143, 156);
+  border-radius: 6px;
+}
+nav{
+  background-color: rgba(0, 0, 0, 0.377);
+  height: 60px; 
+  width: 125.5%;
+  margin-left: -13%;
+  display: flex;
+  font-display: row;
+  justify-content: space-around;
+  align-items: center;
 }
