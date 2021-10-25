@@ -26,7 +26,7 @@ a{
   padding: 10px;
   text-decoration: none;
   height: 40px;
-  background-color: rgb(121, 143, 156);
+  background-color: gray;
   border-radius: 6px;
 }
 nav{
@@ -38,4 +38,16 @@ nav{
   font-display: row;
   justify-content: space-around;
   align-items: center;
+}
+input{
+  margin: 10px 0;
+}
+
+table{
+  border: 1px solid pink;
+  width: 100%;
+}
+
+th{
+  border: 2px solid pink;
 }
