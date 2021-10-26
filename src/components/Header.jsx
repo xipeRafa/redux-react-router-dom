@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <nav>
             <Link to={'/'} >
-                Prductos
+                Productos
             </Link> 
          
             <Link to={"/productos/nuevo"}>

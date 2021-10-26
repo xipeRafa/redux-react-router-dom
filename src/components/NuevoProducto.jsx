@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
+//hook de redux para leer lo que tenemos en el state
 
 // Action product
 import { crearNuevoProductoAction } from '../actions/productoActions';
 
-const NuevoProducto = () => {
+const NuevoProducto = ({history}) => {
 
     //state de el componente
      const [nombre, guardarNombre] = useState('');
@@ -13,6 +14,11 @@ const NuevoProducto = () => {
 
     // utilizar use dispatch y te crea una función
     const dispatch = useDispatch();
+
+      // Acceder al state del store
+      const cargando = useSelector( state => state.productos.loading );
+      const error = useSelector(state => state.productos.error);
+     /*  const alerta = useSelector(state => state.alerta.alerta); */
 
     // cuando el usuario haga submit
     const submitNuevoProducto = e => {
@@ -25,6 +31,12 @@ const NuevoProducto = () => {
             nombre,
             precio
         })
+
+        // redireccionar
+        setTimeout(() => {
+            history.push('/');
+        }, 2000);
+        
     }
 
     return (
@@ -51,6 +63,10 @@ const NuevoProducto = () => {
                             </div>
 
                             <button type="submit">Agregar</button>
+
+                        { cargando ? <p>Cargando...</p> : null }
+                        
+                        { error ? <p className="error">Hubo un error</p> : null }
                 </form>
 
         </div>
