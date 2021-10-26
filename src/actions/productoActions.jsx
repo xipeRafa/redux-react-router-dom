@@ -17,6 +17,6 @@ import {
   // Crear nuevos productos
 export function crearNuevoProductoAction(producto) { //esta se usa en el componente
       return ()=>{
-            console.log('desde action')
+            console.log(producto)
       }
 }
