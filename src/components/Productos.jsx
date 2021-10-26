@@ -1,7 +1,28 @@
+import React, { useEffect } from 'react';
+/* import Producto from './Producto'; */
+
+// Redux
+import { useSelector, useDispatch } from 'react-redux';
+import { obtenerProductosAction } from '../actions/obtenerProductosAction';
 
 
 
 const Productos = () => {
+
+    const dispatch = useDispatch();
+
+    useEffect( ()=> {
+         // Consultar la api
+        const cargarProductos = () => dispatch( obtenerProductosAction() );
+        cargarProductos();
+        // eslint-disable-next-line
+    }, []);
+
+    // obtener el state
+   /*  const productos = useSelector( state => state.productos.productos );
+    const error = useSelector(state => state.productos.error);
+    const cargando = useSelector(state => state.productos.loading); */
+
     return (
         <div>
          <h2>Listado de Productos</h2>
