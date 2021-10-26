@@ -1,7 +1,27 @@
+
+import { crearNuevoProductoAction } from '../actions/productoActions';
+import { useDispatch, useSelector } from 'react-redux';
+
+
 const NuevoProducto = () => {
+
+       
+    // utilizar use dispatch y te crea una función
+    const dispatch = useDispatch();
+
+    // cuando el usuario haga submit
+    const submitNuevoProducto = e => {
+        e.preventDefault();
+
+        // mandar llamar el action de productoAction
+        const agregarProducto = producto => dispatch( crearNuevoProductoAction(producto) );
+
+        agregarProducto()
+    }
+
     return (
         <div>
-                <form>
+                <form  onSubmit={submitNuevoProducto} >
                             <div>
                                 <label>Nombre Producto</label>
                                 <input
