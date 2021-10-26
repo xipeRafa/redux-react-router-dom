@@ -5,6 +5,7 @@ import Producto from './Producto';
 import { useSelector, useDispatch } from 'react-redux';
 import { obtenerProductosAction } from '../actions/obtenerProductosAction';
 
+
 const Productos = () => {
 
     const dispatch = useDispatch();
