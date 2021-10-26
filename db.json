@@ -16,124 +16,14 @@
       "id": 3
     },
     {
-      "nombre": "Rib Eye 800g",
-      "precio": "200",
-      "id": 4
-    },
-    {
-      "nombre": "Jugo de Fresa",
-      "precio": "200",
-      "id": 5
-    },
-    {
-      "nombre": "dedede",
-      "precio": 2,
+      "nombre": "nuevo producto",
+      "precio": 0,
       "id": 6
     },
     {
-      "nombre": "deed",
-      "precio": 1,
+      "nombre": "siiiii!!!",
+      "precio": 0,
       "id": 7
-    },
-    {
-      "nombre": "rrr",
-      "precio": 0,
-      "id": 8
-    },
-    {
-      "nombre": "frfr",
-      "precio": 4,
-      "id": 9
-    },
-    {
-      "nombre": "",
-      "precio": 0,
-      "id": 10
-    },
-    {
-      "nombre": "r",
-      "precio": 0,
-      "id": 11
-    },
-    {
-      "nombre": "",
-      "precio": 0,
-      "id": 12
-    },
-    {
-      "nombre": "ggg",
-      "precio": 0,
-      "id": 13
-    },
-    {
-      "nombre": "",
-      "precio": 0,
-      "id": 14
-    },
-    {
-      "nombre": "koko",
-      "precio": 0,
-      "id": 15
-    },
-    {
-      "nombre": "lpl",
-      "precio": 0,
-      "id": 16
-    },
-    {
-      "nombre": "lplpko",
-      "precio": 0,
-      "id": 17
-    },
-    {
-      "nombre": "wed",
-      "precio": 0,
-      "id": 18
-    },
-    {
-      "nombre": "",
-      "precio": 0,
-      "id": 19
-    },
-    {
-      "nombre": "sdf",
-      "precio": 2,
-      "id": 20
-    },
-    {
-      "nombre": "ss",
-      "precio": 0,
-      "id": 21
-    },
-    {
-      "nombre": "fdfdfdf",
-      "precio": 0,
-      "id": 22
-    },
-    {
-      "nombre": "sdf",
-      "precio": 1,
-      "id": 23
-    },
-    {
-      "nombre": "sdf",
-      "precio": 0,
-      "id": 24
-    },
-    {
-      "nombre": "swqaaaaa",
-      "precio": 1,
-      "id": 25
-    },
-    {
-      "nombre": "swqaaaaa",
-      "precio": -1,
-      "id": 26
-    },
-    {
-      "nombre": "dd",
-      "precio": 0,
-      "id": 27
     }
   ]
 }

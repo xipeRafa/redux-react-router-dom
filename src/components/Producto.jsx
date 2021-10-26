@@ -14,7 +14,7 @@ const Producto = ({ producto }) => {
      // Confirmar si desea eliminarlo
      const confirmarEliminarProducto = id => {
            // preguntar al usuario
-        Swal.fire({
+      /*   Swal.fire({
             title: '¿Estas seguro?',
             text: "Un producto que se elimina no se puede recuperar",
             icon: 'warning',
@@ -28,7 +28,8 @@ const Producto = ({ producto }) => {
                 // pasarlo al action
                 dispatch( borrarProductoAction(id) );
             }
-        });
+        }); */
+        dispatch( borrarProductoAction(id) );
     }
 
     return (

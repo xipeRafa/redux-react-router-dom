@@ -30,6 +30,7 @@ const Productos = () => {
             {cargando ? <p>Cargando....</p> : null}
 
             <table>
+            <caption>Un resumen de los grupos de música más famosos del Reino Unido</caption>
                 <thead>
                     <tr>
                         <th scope="col">Nombre</th>
