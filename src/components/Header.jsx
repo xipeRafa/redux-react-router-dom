@@ -6,12 +6,12 @@ const Header = () => {
         <nav>
             <Link to={'/'} >
                 Productos
-            </Link> 
-         
+            </Link>
+
             <Link to={"/productos/nuevo"}>
                 Agregar Producto &#43;
             </Link>
-    </nav>
+        </nav>
     )
 }
 

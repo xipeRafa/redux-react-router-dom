@@ -119,6 +119,21 @@
       "nombre": "sdf",
       "precio": 0,
       "id": 24
+    },
+    {
+      "nombre": "swqaaaaa",
+      "precio": 1,
+      "id": 25
+    },
+    {
+      "nombre": "swqaaaaa",
+      "precio": -1,
+      "id": 26
+    },
+    {
+      "nombre": "dd",
+      "precio": 0,
+      "id": 27
     }
   ]
 }

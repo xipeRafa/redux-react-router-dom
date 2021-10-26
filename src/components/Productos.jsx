@@ -1,48 +1,55 @@
 import React, { useEffect } from 'react';
-/* import Producto from './Producto'; */
+import Producto from './Producto';
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
 import { obtenerProductosAction } from '../actions/obtenerProductosAction';
 
-
-
 const Productos = () => {
 
     const dispatch = useDispatch();
 
-    useEffect( ()=> {
-         // Consultar la api
-        const cargarProductos = () => dispatch( obtenerProductosAction() );
+    useEffect(() => {
+        // Consultar la api
+        const cargarProductos = () => dispatch(obtenerProductosAction());
         cargarProductos();
         // eslint-disable-next-line
     }, []);
 
     // obtener el state
-   /*  const productos = useSelector( state => state.productos.productos );
+    const productos = useSelector(state => state.productos.productos);
     const error = useSelector(state => state.productos.error);
-    const cargando = useSelector(state => state.productos.loading); */
+    const cargando = useSelector(state => state.productos.loading);
 
     return (
         <div>
-         <h2>Listado de Productos</h2>
+            <h2>Listado de Productos</h2>
 
-{/* { error ? <p className="error">Hubo un error</p> : null }
+            {error ? <p className="error">Hubo un error</p> : null}
 
-{ cargando ? <p>Cargando....</p> : null } */}
+            {cargando ? <p>Cargando....</p> : null}
 
-<table>
-    <thead>
-         <tr>
-             <th scope="col">Nombre</th>
-             <th scope="col">Precio</th>
-             <th scope="col">Acciones</th>
-         </tr>
-    </thead>
-    <tbody>
-      
-    </tbody>
-</table> 
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {productos.length === 0 ? 'No hay productos' : (
+                        productos.map(producto => (
+                            <Producto
+                                key={producto.id}
+                                producto={producto}
+                            />
+                        ))
+                    )}
+
+                </tbody>
+            </table>
         </div>
     )
 }
