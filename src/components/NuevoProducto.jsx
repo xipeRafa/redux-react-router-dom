@@ -21,7 +21,7 @@ const NuevoProducto = () => {
         // mandar llamar el action de productoAction
         const agregarProducto = producto => dispatch( crearNuevoProductoAction(producto) )
 
-        agregarProducto({ //aqui se pone la info a enviar
+        agregarProducto({ //aqui se pone la info a enviar(state-claves)
             nombre,
             precio
         })
