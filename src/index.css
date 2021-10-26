@@ -70,7 +70,10 @@ td a{
 }
 
 .error{
-  color:red;
+  color:rgba(207, 3, 3, 0.521);
   border: 1px solid red;
   padding: 10px;
+  background-color: rgba(219, 205, 205, 0.425);
+  font-weight: bold;
+  text-transform: uppercase;
 }
