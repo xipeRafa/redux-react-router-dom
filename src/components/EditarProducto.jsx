@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { editarProductoAction } from '../actions/productoEditar';
+import { editarProductoAction } from '../actions/productoEditarAction';
 import { useHistory } from 'react-router-dom';
 
 const EditarProducto = () => {
@@ -39,6 +39,7 @@ const EditarProducto = () => {
 
     return (
         <>
+            <h2>En Edicion:</h2>
             <form onSubmit={submitEditarProducto}>
                 <div>
                     <label>Nombre Producto</label>

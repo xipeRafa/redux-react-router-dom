@@ -25,8 +25,7 @@ const initialState = {
   export default function(state = initialState, action) {
       switch(action.type) {
             case COMENZAR_DESCARGA_PRODUCTOS:
-            case AGREGAR_PRODUCTO:
-                  return {...state, loading: action.payload}
+            case AGREGAR_PRODUCTO: return {...state, loading: action.payload}
 
             case AGREGAR_PRODUCTO_EXITO:
                   return {
@@ -47,22 +46,19 @@ const initialState = {
                       error: null,
                       productos: action.payload
                   }
-            case OBTENER_PRODUCTO_ELIMINAR:
-                  return {
-                      ...state,
-                      productoeliminar: action.payload
-                  }
+
+            case OBTENER_PRODUCTO_ELIMINAR: return {...state, productoeliminar: action.payload}
+
             case PRODUCTO_ELIMINADO_EXITO:
                   return {
                       ...state,
                       productos: state.productos.filter( producto => producto.id !== state.productoeliminar ),
                       productoeliminar: null
                   }
+                  
             case  OBTENER_PRODUCTO_EDITAR:
-                  return {
-                      ...state,
-                       productoeditar: action.payload
-                  }
+                  return { ...state, productoeditar: action.payload }
+
             case PRODUCTO_EDITADO_EXITO:
                   return {
                       ...state,

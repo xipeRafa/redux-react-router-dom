@@ -1,27 +1,22 @@
-import {
-    COMENZAR_EDICION_PRODUCTO,
-    OBTENER_PRODUCTO_EDITAR,
-    PRODUCTO_EDITADO_EXITO,
-    PRODUCTO_EDITADO_ERROR
-} from '../types';
+import {COMENZAR_EDICION_PRODUCTO,   OBTENER_PRODUCTO_EDITAR, 
+        PRODUCTO_EDITADO_EXITO,      PRODUCTO_EDITADO_ERROR} from '../types';
 
 import clienteAxios from '../config/axios';
 
-// Colocar producto en edición
+
 export function obtenerProductoEditar(producto) {
       return (dispatch) => {
           dispatch( obtenerProductoEditarAction(producto) )
       }
-  }
+}
   
-  const obtenerProductoEditarAction = producto => ({
+const obtenerProductoEditarAction = producto => ({
       type: OBTENER_PRODUCTO_EDITAR,
       payload: producto
-  })
+})
 
 
-  // Edita un registro en la api y state
-export function editarProductoAction(producto) {
+export function editarProductoAction(producto) {  // Edita un registro en la api y state
     return async (dispatch) => {
         dispatch( editarProducto() );
 
@@ -34,6 +29,7 @@ export function editarProductoAction(producto) {
         }
     }
 }
+
 const editarProducto = () => ({
     type: COMENZAR_EDICION_PRODUCTO
 });

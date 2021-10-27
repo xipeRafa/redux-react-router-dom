@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Producto from './Producto';
 
-// Redux
 import { useSelector, useDispatch } from 'react-redux';
 import { obtenerProductosAction } from '../actions/obtenerProductosAction';
 
@@ -31,7 +30,6 @@ const Productos = () => {
             {cargando ? <p>Cargando....</p> : null}
 
             <table>
-            <caption>Un resumen de los grupos de música más famosos del Reino Unido</caption>
                 <thead>
                     <tr>
                         <th scope="col">Nombre</th>
@@ -51,6 +49,7 @@ const Productos = () => {
                     )}
 
                 </tbody>
+                <caption>Un resumen de los grupos de música más famosos del Reino Unido</caption>
             </table>
         </div>
     )

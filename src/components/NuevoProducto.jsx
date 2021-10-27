@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-//hook de redux para leer lo que tenemos en el state
 
 // Action product
 import { crearNuevoProductoAction } from '../actions/crearNuevoProductoAction';
 import { mostrarAlerta, ocultarAlertaAction } from '../actions/alertaActions';
+
 const NuevoProducto = ({ history }) => {
 
-    //state de el componente
     const [nombre, guardarNombre] = useState('');
     const [precio, guardarPrecio] = useState(0);
 
-    // utilizar use dispatch y te crea una función
     const dispatch = useDispatch();
 
     // Acceder al state del store
@@ -20,15 +18,12 @@ const NuevoProducto = ({ history }) => {
     const error = useSelector(state => state.productos.error);
     const alerta = useSelector(state => state.alerta.alerta);  
 
-     // mandar llamar el action de productoAction
-     const agregarProducto = producto => dispatch(crearNuevoProductoAction(producto))
+    const agregarProducto = producto => dispatch(crearNuevoProductoAction(producto))
 
-    // cuando el usuario haga submit
     const submitNuevoProducto = e => {
         e.preventDefault();
 
-         // validar formulario
-         if(nombre.trim() === '' || precio <= 0) {
+        if(nombre.trim() === '' || precio <= 0) {
 
             const alerta = {
                 msg: 'Ambos campos son obligatorios',
@@ -39,18 +34,11 @@ const NuevoProducto = ({ history }) => {
             return;
         }
 
-        // si no hay errores
         dispatch( ocultarAlertaAction() );
 
-        agregarProducto({ //aqui se pone la info a enviar(state-claves)
-            nombre,
-            precio
-        })
+        agregarProducto({ nombre, precio })
 
-        // redireccionar
-        setTimeout(() => {
-            history.push('/');
-        }, 2000);
+        setTimeout(() => { history.push('/') }, 2000);
 
     }
 

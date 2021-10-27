@@ -1,22 +1,20 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-/* import Swal from 'sweetalert2'; */
-// Redux
+import Swal from 'sweetalert2'; 
 import { useDispatch } from 'react-redux';
 import { borrarProductoAction } from '../actions/borrarProductoAction';
-import { obtenerProductoEditar } from '../actions/productoEditar'
+import { obtenerProductoEditar } from '../actions/productoEditarAction'
 
 const Producto = ({ producto }) => {
 
     const { nombre, precio, id } = producto;
 
     const dispatch = useDispatch();
-    const history = useHistory(); // habilitar history para redirección
+    const history = useHistory(); 
 
-    // Confirmar si desea eliminarlo
     const confirmarEliminarProducto = id => {
-        // preguntar al usuario
-        /*   Swal.fire({
+
+        Swal.fire({
               title: '¿Estas seguro?',
               text: "Un producto que se elimina no se puede recuperar",
               icon: 'warning',
@@ -25,16 +23,14 @@ const Producto = ({ producto }) => {
               cancelButtonColor: '#d33',
               confirmButtonText: 'Si, eliminar!!',
               cancelButtonText: 'Cancelar'
-          }).then((result) => {
+        }).then((result) => {
               if (result.value) {
-                  // pasarlo al action
                   dispatch( borrarProductoAction(id) );
               }
-          }); */
-        dispatch(borrarProductoAction(id));
+        })
+
     }
 
-    // función que redirige de forma programada
     const redireccionarEdicion = producto => {
         dispatch(obtenerProductoEditar(producto));
         history.push(`/productos/editar/${producto.id}`)
@@ -42,20 +38,15 @@ const Producto = ({ producto }) => {
 
     return (
         <tr key={id}>
-            <td>{nombre}</td>
+            <td>  {nombre}</td>
             <td>$ {precio} </td>
             <td>
-                <button
-                    type="button"
-                    onClick={() => redireccionarEdicion(producto)}
-                    className="btn btn-primary mr-2">
+                <button type="button" onClick={() => redireccionarEdicion(producto)}>
                     Editar
                 </button>
-                <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={() => confirmarEliminarProducto(id)}
-                >Eliminar </button>
+                <button type="button" onClick={() => confirmarEliminarProducto(id)}>
+                    Eliminar 
+                </button>
             </td>
         </tr>
     );
