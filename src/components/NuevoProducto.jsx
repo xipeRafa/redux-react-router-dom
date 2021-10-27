@@ -41,6 +41,9 @@ const NuevoProducto = ({ history }) => {
 
     return (
         <div>
+            
+            <h2>Agregar Producto</h2>
+
             <form onSubmit={submitNuevoProducto}>
                 <div>
                     <label>Nombre Producto</label>

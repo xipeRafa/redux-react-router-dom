@@ -41,9 +41,9 @@ const Producto = ({ producto }) => {
     }
 
     return (
-        <tr>
+        <tr key={id}>
             <td>{nombre}</td>
-            <td><span> $ {precio} </span></td>
+            <td>$ {precio} </td>
             <td>
                 <button
                     type="button"

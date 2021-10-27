@@ -1,14 +1,39 @@
 {
   "productos": [
     {
-      "id": 2,
-      "nombre": "Jugo de Naranja",
-      "precio": "1"
+      "nombre": "rafael angel",
+      "precio": -1,
+      "id": 1
     },
     {
-      "nombre": "nuevo product",
-      "precio": "13",
+      "nombre": "rafael angel",
+      "precio": -1,
+      "id": 2
+    },
+    {
+      "nombre": "rafael angel",
+      "precio": "4",
+      "id": 4
+    },
+    {
+      "nombre": "fdfdfdflplp",
+      "precio": 2,
       "id": 6
+    },
+    {
+      "nombre": "rafael angel",
+      "precio": 5,
+      "id": 7
+    },
+    {
+      "nombre": "wqd",
+      "precio": 2,
+      "id": 8
+    },
+    {
+      "nombre": "w",
+      "precio": 0,
+      "id": 9
     }
   ]
 }
