@@ -21,11 +21,6 @@
       "id": 6
     },
     {
-      "nombre": "rafael angel",
-      "precio": 5,
-      "id": 7
-    },
-    {
       "nombre": "wqd",
       "precio": 2,
       "id": 8
@@ -34,6 +29,21 @@
       "nombre": "w",
       "precio": 0,
       "id": 9
+    },
+    {
+      "nombre": "dededswsws",
+      "precio": "1",
+      "id": 10
+    },
+    {
+      "nombre": "ww",
+      "precio": 0,
+      "id": 11
+    },
+    {
+      "nombre": "ty",
+      "precio": 1,
+      "id": 12
     }
   ]
 }

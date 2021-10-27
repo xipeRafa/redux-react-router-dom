@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // Action product
 import { crearNuevoProductoAction } from '../actions/productoActions';
-
+import { mostrarAlerta, ocultarAlertaAction } from '../actions/alertaActions';
 const NuevoProducto = ({ history }) => {
 
     //state de el componente
@@ -18,14 +18,29 @@ const NuevoProducto = ({ history }) => {
     // Acceder al state del store
     const cargando = useSelector(state => state.productos.loading);
     const error = useSelector(state => state.productos.error);
-    /*  const alerta = useSelector(state => state.alerta.alerta);  */
+    const alerta = useSelector(state => state.alerta.alerta);  
+
+     // mandar llamar el action de productoAction
+     const agregarProducto = producto => dispatch(crearNuevoProductoAction(producto))
 
     // cuando el usuario haga submit
     const submitNuevoProducto = e => {
         e.preventDefault();
 
-        // mandar llamar el action de productoAction
-        const agregarProducto = producto => dispatch(crearNuevoProductoAction(producto))
+         // validar formulario
+         if(nombre.trim() === '' || precio <= 0) {
+
+            const alerta = {
+                msg: 'Ambos campos son obligatorios',
+                classes: 'error'
+            }
+            dispatch( mostrarAlerta(alerta) );
+
+            return;
+        }
+
+        // si no hay errores
+        dispatch( ocultarAlertaAction() );
 
         agregarProducto({ //aqui se pone la info a enviar(state-claves)
             nombre,
@@ -41,8 +56,10 @@ const NuevoProducto = ({ history }) => {
 
     return (
         <div>
-            
+
             <h2>Agregar Producto</h2>
+
+            {alerta ? <p className={alerta.classes}> {alerta.msg} </p> : null }
 
             <form onSubmit={submitNuevoProducto}>
                 <div>
