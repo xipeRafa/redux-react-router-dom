@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 //hook de redux para leer lo que tenemos en el state
 
 // Action product
-import { crearNuevoProductoAction } from '../actions/productoActions';
+import { crearNuevoProductoAction } from '../actions/crearNuevoProductoAction';
 import { mostrarAlerta, ocultarAlertaAction } from '../actions/alertaActions';
 const NuevoProducto = ({ history }) => {
 
